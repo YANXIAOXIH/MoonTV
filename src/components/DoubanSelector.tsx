@@ -45,6 +45,14 @@ const DoubanSelector: React.FC<DoubanSelectorProps> = ({
     { label: '最新电影', value: '最新' },
     { label: '豆瓣高分', value: '豆瓣高分' },
     { label: '冷门佳片', value: '冷门佳片' },
+    { label: '经典', value: '经典' },
+    { label: '动作', value: '动作' },
+    { label: '喜剧', value: '喜剧' },
+    { label: '爱情', value: '爱情' },
+    { label: '科幻', value: '科幻' },
+    { label: '悬疑', value: '悬疑' },
+    { label: '恐怖', value: '恐怖' },
+    { label: '治愈', value: '治愈' },
   ];
 
   // 电影的二级选择器选项
@@ -63,6 +71,7 @@ const DoubanSelector: React.FC<DoubanSelectorProps> = ({
     { label: '欧美', value: 'tv_american' },
     { label: '日本', value: 'tv_japanese' },
     { label: '韩国', value: 'tv_korean' },
+    { label: '港剧', value: '港剧' },
     { label: '动漫', value: 'tv_animation' },
     { label: '纪录片', value: 'tv_documentary' },
   ];
@@ -239,11 +248,10 @@ const DoubanSelector: React.FC<DoubanSelectorProps> = ({
                 buttonRefs.current[index] = el;
               }}
               onClick={() => onChange(option.value)}
-              className={`relative z-10 px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-full transition-all duration-200 whitespace-nowrap ${
-                isActive
-                  ? 'text-gray-900 dark:text-gray-100 cursor-default'
-                  : 'text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer'
-              }`}
+              className={`relative z-10 px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-full transition-all duration-200 whitespace-nowrap ${isActive
+                ? 'text-gray-900 dark:text-gray-100 cursor-default'
+                : 'text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer'
+                }`}
             >
               {option.label}
             </button>
